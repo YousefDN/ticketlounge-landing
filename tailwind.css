@@ -1,0 +1,419 @@
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+
+  /* Custom button hover effects */
+  .btn-primary {
+    @apply bg-[#00eb83] hover:bg-[#00d474] hover:shadow-[0_6px_20px_0_rgba(0,235,131,0.5)] transform hover:scale-105 transition-all duration-300 ease-out;
+  }
+
+  /* Typography utilities */
+  .text-responsive-h1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  .text-responsive-h2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  .text-responsive-h3 {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+
+  .text-responsive-body {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  /* Section spacing utilities */
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+
+  .section-padding-y {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  /* Container utilities */
+  .container-responsive {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+}
+
+:root {
+  --avatar-initials-medium-font-family: "Montserrat", Helvetica;
+  --avatar-initials-medium-font-size: 24px;
+  --avatar-initials-medium-font-style: normal;
+  --avatar-initials-medium-font-weight: 400;
+  --avatar-initials-medium-letter-spacing: 0px;
+  --avatar-initials-medium-line-height: 30px;
+  --avatar-label-small-font-family: "Montserrat", Helvetica;
+  --avatar-label-small-font-size: 14px;
+  --avatar-label-small-font-style: normal;
+  --avatar-label-small-font-weight: 400;
+  --avatar-label-small-letter-spacing: 0px;
+  --avatar-label-small-line-height: 20px;
+  --avatar-label-xsmall-font-family: "Montserrat", Helvetica;
+  --avatar-label-xsmall-font-size: 10px;
+  --avatar-label-xsmall-font-style: normal;
+  --avatar-label-xsmall-font-weight: 400;
+  --avatar-label-xsmall-letter-spacing: 0px;
+  --avatar-label-xsmall-line-height: 16px;
+  --blur-style: ;
+  --body-1-font-family: "Montserrat", Helvetica;
+  --body-1-font-size: 16px;
+  --body-1-font-style: normal;
+  --body-1-font-weight: 400;
+  --body-1-letter-spacing: 0px;
+  --body-1-line-height: 24px;
+  --body-2-font-family: "Montserrat", Helvetica;
+  --body-2-font-size: 14px;
+  --body-2-font-style: normal;
+  --body-2-font-weight: 400;
+  --body-2-letter-spacing: 0px;
+  --body-2-line-height: 20px;
+  --body-caption-font-family: "Montserrat", Helvetica;
+  --body-caption-font-size: 12px;
+  --body-caption-font-style: normal;
+  --body-caption-font-weight: 400;
+  --body-caption-letter-spacing: 0.25px;
+  --body-caption-line-height: 18px;
+  --breadcrumb-breadcrumb-2-font-family: "Montserrat", Helvetica;
+  --breadcrumb-breadcrumb-2-font-size: 10px;
+  --breadcrumb-breadcrumb-2-font-style: normal;
+  --breadcrumb-breadcrumb-2-font-weight: 400;
+  --breadcrumb-breadcrumb-2-letter-spacing: 0.25px;
+  --breadcrumb-breadcrumb-2-line-height: 14px;
+  --button-medium-font-family: "Montserrat", Helvetica;
+  --button-medium-font-size: 14px;
+  --button-medium-font-style: normal;
+  --button-medium-font-weight: 500;
+  --button-medium-letter-spacing: 0px;
+  --button-medium-line-height: 18px;
+  --button-primary: 0px 2px 0px 0px rgba(0, 218, 118, 1);
+  --dark-modeneutralbg: rgba(18, 18, 18, 1);
+  --headings-1-font-family: "Montserrat", Helvetica;
+  --headings-1-font-size: 60px;
+  --headings-1-font-style: normal;
+  --headings-1-font-weight: 500;
+  --headings-1-letter-spacing: 0px;
+  --headings-1-line-height: 68px;
+  --headings-2-font-family: "Montserrat", Helvetica;
+  --headings-2-font-size: 48px;
+  --headings-2-font-style: normal;
+  --headings-2-font-weight: 500;
+  --headings-2-letter-spacing: 0px;
+  --headings-2-line-height: 56px;
+  --headings-3-font-family: "Montserrat", Helvetica;
+  --headings-3-font-size: 32px;
+  --headings-3-font-style: normal;
+  --headings-3-font-weight: 500;
+  --headings-3-letter-spacing: 0px;
+  --headings-3-line-height: 40px;
+  --headings-4-font-family: "Montserrat", Helvetica;
+  --headings-4-font-size: 24px;
+  --headings-4-font-style: normal;
+  --headings-4-font-weight: 500;
+  --headings-4-letter-spacing: 0px;
+  --headings-4-line-height: 32px;
+  --headings-6-font-family: "Montserrat", Helvetica;
+  --headings-6-font-size: 16px;
+  --headings-6-font-style: normal;
+  --headings-6-font-weight: 600;
+  --headings-6-letter-spacing: 0px;
+  --headings-6-line-height: 24px;
+  --light-modeerrormain: rgba(211, 47, 47, 1);
+  --light-modeneutralwhite-bg: rgba(255, 255, 255, 1);
+  --light-modesuccesslight: rgba(76, 175, 80, 1);
+  --light-modetextbody: rgba(0, 0, 0, 0.6);
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 235, 131, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 235, 131, 0.6);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
