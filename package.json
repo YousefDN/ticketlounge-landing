@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "npm rebuild esbuild"
   },
   "dependencies": {
     "clsx": "2.1.1",
@@ -27,6 +28,7 @@
     "esbuild": "0.24.0",
     "globals": "15.12.0",
     "tailwindcss": "3.4.16",
+    "typescript": "^5.0.0",
     "vite": "6.0.4"
   },
   "alias": {
